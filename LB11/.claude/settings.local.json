@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/yurayasnii/projects/web-labs/**)",
+      "Bash(git -C /Users/yurayasnii/projects/web-labs status)"
+    ]
+  }
+}
