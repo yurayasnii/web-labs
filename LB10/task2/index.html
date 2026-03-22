@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Task 2 - RAM Modal</title>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="modal">
+        <div class="modal__header">
+            <span class="modal__title">RAM Options</span>
+            <span class="modal__close">&times;</span>
+        </div>
+
+        <div class="modal__body">
+            <div class="modal__preview">
+                <img class="modal__thumbnail" src="" alt="RAM preview" id="preview-img">
+            </div>
+
+            <div class="modal__fields">
+                <div class="modal__field">
+                    <label class="modal__label" for="manufacturer">Manufacturer / Model</label>
+                    <input class="modal__input" type="text" id="manufacturer" placeholder="e.g. Kingston Fury Beast 32GB">
+                </div>
+
+                <div class="modal__field">
+                    <label class="modal__label" for="purpose">Purpose</label>
+                    <select class="modal__select" id="purpose">
+                        <option value="">-- Select purpose --</option>
+                        <option value="desktop">For desktop PCs</option>
+                        <option value="laptop">For laptops</option>
+                    </select>
+                </div>
+
+                <div class="modal__field">
+                    <label class="modal__label" for="type">Type</label>
+                    <select class="modal__select" id="type">
+                        <option value="">-- Select type --</option>
+                        <option value="ddr5">DDR5</option>
+                        <option value="ddr4">DDR4</option>
+                        <option value="ddr3">DDR3</option>
+                        <option value="ddr2">DDR2</option>
+                    </select>
+                </div>
+
+                <div class="modal__field">
+                    <label class="modal__label" for="volume">Volume, GB</label>
+                    <input class="modal__input" type="number" id="volume" placeholder="e.g. 32" min="1">
+                </div>
+
+                <div class="modal__field">
+                    <label class="modal__label" for="sticks">Number of sticks in kit</label>
+                    <input class="modal__input" type="number" id="sticks" placeholder="e.g. 2" min="1">
+                </div>
+
+                <div class="modal__field">
+                    <label class="modal__label" for="image">Select image file:</label>
+                    <input class="modal__file" type="file" id="image" accept="image/*">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal__footer">
+            <button class="modal__btn modal__btn--confirm">Confirm</button>
+            <button class="modal__btn modal__btn--cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('image');
+        const previewImg = document.getElementById('preview-img');
+
+        fileInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                previewImg.src = URL.createObjectURL(file);
+                previewImg.style.display = 'block';
+            }
+        });
+
+        document.querySelector('.modal__close').addEventListener('click', function () {
+            document.querySelector('.modal').style.display = 'none';
+            document.querySelector('.overlay').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

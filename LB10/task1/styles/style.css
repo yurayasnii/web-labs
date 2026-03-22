@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+.container > p {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background-color: rgb(211, 131, 12);
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 50px;
+    padding-right: 300px;
+    z-index: 2;
+}
+
+.container > img {
+    width: 50%;
+    position: absolute;
+    bottom: -90px;
+    right: -90px;
+    z-index: 1;
+}
+
+.container > form {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: calc(100% - 25px);
+    height: 100%;
+    background-color: lightblue;
+    padding: 15% 5%;
+}
+
+.container form label {
+    display: block;
+    padding: 10px 0;
+    color: rgb(101, 121, 128);
+}
+
+.container form input {
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(187, 223, 236);
+    border: none;
+    border-bottom: 2px solid rgb(101, 121, 128);
+}
+
+.container form > div {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.container form > div > div:first-child > div {
+    display: flex;
+    gap: 10px;
+}

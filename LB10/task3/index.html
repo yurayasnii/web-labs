@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Task 3 - Registration Form</title>
+</head>
+<body>
+    <div class="form-wrapper">
+        <form class="form" action="#" method="POST">
+            <div class="form__sections">
+
+                <div class="form__section">
+                    <h2 class="form__section-title">Registration form</h2>
+
+                    <div class="form__field">
+                        <span class="form__icon">
+                            <img src="../icons_hw_module_8/username.png" alt="username">
+                        </span>
+                        <input class="form__input" type="text" name="username" placeholder="Username" required>
+                    </div>
+
+                    <div class="form__field">
+                        <span class="form__icon">
+                            <img src="../icons_hw_module_8/email.png" alt="email">
+                        </span>
+                        <input class="form__input" type="email" name="email" placeholder="Email address" required>
+                    </div>
+
+                    <div class="form__field form__field--double">
+                        <span class="form__icon">
+                            <img src="../icons_hw_module_8/pswd.png" alt="password">
+                        </span>
+                        <input class="form__input" type="password" name="password" placeholder="Password" required>
+                        <input class="form__input" type="password" name="confirm_password" placeholder="Confirm password" required>
+                    </div>
+
+                    <div class="form__checkboxes">
+                        <label class="form__checkbox-label">
+                            <input type="checkbox" name="newsletter" checked>
+                            I want to receive news and special offers
+                        </label>
+                        <label class="form__checkbox-label">
+                            <input type="checkbox" name="terms" checked>
+                            I agree with the Terms and Conditions
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form__section">
+                    <h2 class="form__section-title">Personal details</h2>
+
+                    <div class="form__field form__field--double">
+                        <input class="form__input" type="text" name="first_name" placeholder="First name" required>
+                        <input class="form__input" type="text" name="last_name" placeholder="Last name" required>
+                    </div>
+
+                    <div class="form__field form__field--double">
+                        <select class="form__input form__select" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input class="form__input" type="date" name="birthdate" placeholder="mm/dd/yyyy">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form__footer">
+                <button class="form__submit" type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
