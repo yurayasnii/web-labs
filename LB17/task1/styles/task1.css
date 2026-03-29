@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.block {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 15px 40px 15px 15px;
+  margin-bottom: 15px;
+}
+
+.block h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.block p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #999;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
